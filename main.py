@@ -1,12 +1,13 @@
-def calcular_media(*notas):
-    soma = 0
+def minha_funcao(nome, **infos_adicionais):
+    print ("Olá " + nome)
 
-    for nota in notas:
-        soma += nota
+    if "nota_tp" not in infos_adicionais:
+        print ("Nota TP não informada")
+        return
 
-    media = soma / len(notas)
+    if infos_adicionais.get("nota_tp") > 7:
+        print ("Aprovado")
+    else:
+        print ("Reprovado")
 
-    return media
-
-
-print (calcular_media(5, 7, 8, 9))
+minha_funcao("Aluno", nota_tp = int(input("Digite a nota TP: ")))
