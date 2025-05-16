@@ -1,6 +1,12 @@
-def minha_funcao(nome: str):
-    print("Olá " + nome)
+def calcular_media(*notas):
+    soma = 0
 
-minha_funcao("Mundo")
-minha_funcao("Python")
-minha_funcao("Programação")
+    for nota in notas:
+        soma += nota
+
+    media = soma / len(notas)
+
+    return media
+
+
+print (calcular_media(5, 7, 8, 9))
