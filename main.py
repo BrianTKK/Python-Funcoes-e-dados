@@ -1,13 +1,5 @@
-def minha_funcao(nome, **infos_adicionais):
-    print ("Olá " + nome)
+nome = "Manoela"
 
-    if "nota_tp" not in infos_adicionais:
-        print ("Nota TP não informada")
-        return
+print(len(nome))
 
-    if infos_adicionais.get("nota_tp") > 7:
-        print ("Aprovado")
-    else:
-        print ("Reprovado")
-
-minha_funcao("Aluno", nota_tp = int(input("Digite a nota TP: ")))
+print(nome[0:4])
